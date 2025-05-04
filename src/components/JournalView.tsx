@@ -90,8 +90,8 @@ const JournalView = () => {
         </div>
         
         <div className="md:col-span-2 diary-page">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="font-handwriting text-xl text-diary-coffee">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+            <h2 className="font-handwriting text-xl text-diary-coffee mb-2 sm:mb-0">
               {format(selected, 'EEEE, MMMM d, yyyy')}
             </h2>
             <Button 
