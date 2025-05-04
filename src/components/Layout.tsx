@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 overflow-auto">
+      <main className="flex-1 p-3 sm:p-4 md:p-6 overflow-auto w-full">
         {children}
       </main>
       <Toaster position="bottom-right" />
