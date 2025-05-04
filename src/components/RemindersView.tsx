@@ -90,10 +90,12 @@ const RemindersView = () => {
       </header>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-        <ReminderCalendar 
-          selected={newReminder.date} 
-          onSelect={handleCalendarDateSelect} 
-        />
+          <div className="flex justify-center">
+            <ReminderCalendar 
+              selected={newReminder.date} 
+              onSelect={handleCalendarDateSelect} 
+              />
+          </div>
         <ReminderList 
           reminders={reminders}
           onDelete={deleteReminder}
