@@ -65,25 +65,26 @@ const JournalView = () => {
       </header>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        <div className="diary-page washi-tape washi-tape-blue">
-          <h2 className="font-handwriting text-xl text-diary-coffee text-center mb-4">
+        <div className="diary-page washi-tape washi-tape-blue ">
+          <h2 className="font-handwriting text-xl text-diary-coffee text-center mb-4 ">
             Select Date
           </h2>
-          <Calendar
-            mode="single"
-            selected={selected}
-            onSelect={date => date && setSelected(date)}
-            className="p-2 sm:p-3 mx-auto pointer-events-auto max-w-full"
-            modifiers={{
-              highlighted: highlightedDates
-            }}
-            modifiersStyles={{
-              highlighted: {
-                backgroundColor: '#E8C7C8',
-                borderRadius: '50%'
-              }
-            }}
-          />
+          <div className="flex justify-center">
+            <Calendar
+              mode="single"
+              selected={selected}
+              onSelect={date => date && setSelected(date)}
+              modifiers={{
+                highlighted: highlightedDates
+              }}
+              modifiersStyles={{
+                highlighted: {
+                  backgroundColor: '#E8C7C8',
+                  borderRadius: '50%'
+                }
+              }}
+            />
+           </div> 
           <p className="text-center text-diary-coffee/70 mt-4 text-xs sm:text-sm">
             Highlighted dates have journal entries
           </p>
